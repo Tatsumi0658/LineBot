@@ -29,14 +29,17 @@ class LinebotController < ApplicationController
           case event.message['text']
           when '1'
             message = {
+              type: "text",
               text: "1"
             }
           when '2'
             message = {
+              type:"text",
               text: "2"
             }
           else
             message = {
+              type:"text",
               text: "default"
             }
           end

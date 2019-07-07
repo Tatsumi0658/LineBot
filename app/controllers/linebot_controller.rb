@@ -40,12 +40,7 @@ class LinebotController < ApplicationController
           else
             message = {
               type:"text",
-              text:<<-EOS
-              ご利用いただき、ありがとうございます。
-              ご希望の数値を入れることで、情報をお届けします。
-              1. 新着情報
-              2. 休業日
-              EOS
+              text:"ご利用いただき、ありがとうございます。\nご希望の数値を入れることで、情報をお届けします。\n1. 新着情報\n2. 休業日"
             }
           end
           client.reply_message(event['replyToken'], message)

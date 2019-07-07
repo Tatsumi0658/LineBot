@@ -38,7 +38,7 @@ class LinebotController < ApplicationController
               text:"今月の休業日は、第２、第４水曜日です"
             }
           else
-            str = <<-"EOS"
+            str=<<-"EOS"
             ご利用いただき、ありがとうございます。
             ご希望の数値を入れることで、情報をお届けします。
             1. 新着情報

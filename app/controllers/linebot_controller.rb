@@ -46,7 +46,7 @@ class LinebotController < ApplicationController
             EOS
             message = {
               type:"text",
-              text: str
+              text:str
             }
           end
           client.reply_message(event['replyToken'], message)

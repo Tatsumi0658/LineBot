@@ -40,7 +40,7 @@ class LinebotController < ApplicationController
               text: "default"
             }
           end
-        client.reply_message(event['replyToken'], message)
+          client.reply_message(event['replyToken'], message)
         end
       end
     }

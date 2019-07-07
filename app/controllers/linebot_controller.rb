@@ -30,17 +30,23 @@ class LinebotController < ApplicationController
           when '1'
             message = {
               type: "text",
-              text: "1"
+              text: "今週のおすすめは、カツオのたたきです"
             }
           when '2'
             message = {
               type:"text",
-              text: "2"
+              text:"今月の休業日は、第２、第４水曜日です"
             }
           else
+            str = <<-"EOS"
+            ご利用いただき、ありがとうございます。
+            ご希望の数値を入れることで、情報をお届けします。
+            1. 新着情報
+            2. 休業日
+            EOS
             message = {
               type:"text",
-              text: "default"
+              text: str
             }
           end
           client.reply_message(event['replyToken'], message)

@@ -38,15 +38,14 @@ class LinebotController < ApplicationController
               text:"今月の休業日は、第２、第４水曜日です"
             }
           else
-            str=<<-EOS
-            ご利用いただき、ありがとうございます。
-            ご希望の数値を入れることで、情報をお届けします。
-            1. 新着情報
-            2. 休業日
-            EOS
             message = {
               type:"text",
-              text:str
+              text:<<-EOS
+              ご利用いただき、ありがとうございます。
+              ご希望の数値を入れることで、情報をお届けします。
+              1. 新着情報
+              2. 休業日
+              EOS
             }
           end
           client.reply_message(event['replyToken'], message)

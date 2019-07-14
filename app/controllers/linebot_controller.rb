@@ -30,7 +30,7 @@ class LinebotController < ApplicationController
           when '1'
             message = {
               type: "text",
-              text: "今週のおすすめは、カツオのたたきです"
+              text: "恋愛特集です, https://hogehoge"
             }
           when '2'
             message = {
